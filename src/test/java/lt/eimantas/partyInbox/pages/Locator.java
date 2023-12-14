@@ -1,9 +1,16 @@
-package lt.eimantas.piguLt.pages;
+package lt.eimantas.partyInbox.pages;
 
 import org.openqa.selenium.By;
 
 public class Locator {
-    public static class login {
+    public static class Search {
+
+        public static By writeTheDesiredItem = By.xpath("//input[@id='search-input']");
+        public static By clickFind = By.xpath("//button[@id='search-icone']");
+        public static By findedItem = By.xpath("//div[@id='load_info']/div[1]/div/a[2]");
+    }
+
+    public static class Login {
 
         public static By writeEmail = By.xpath(
                 "//input[@type='email']"
@@ -25,6 +32,9 @@ public class Locator {
         );
         public static By readWarning = By.xpath(
                 "//div[@class='info-message alert']"
+        );
+        public static By clickButtonAtsijungti = By.xpath(
+                "//a[@title='Atsijungti']"
         );
     }
 

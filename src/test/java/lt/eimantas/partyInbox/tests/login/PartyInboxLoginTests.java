@@ -1,7 +1,7 @@
-package lt.eimantas.piguLt.tests.login;
+package lt.eimantas.partyInbox.tests.login;
 
-import lt.eimantas.piguLt.pages.login.PartyInboxLoginPages;
-import lt.eimantas.piguLt.tests.TestBase;
+import lt.eimantas.partyInbox.pages.login.PartyInboxLoginPages;
+import lt.eimantas.partyInbox.tests.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -12,17 +12,20 @@ public class PartyInboxLoginTests extends TestBase {
     @Override
     public void setUp() {
         PartyInboxLoginPages.openUrl("https://www.partyinbox.lt/prisijungti-prie-paskyros");
+        PartyInboxLoginPages.closeAlert();
     }
 
     @Test
     public void testLoginPositive() {
         String email = "jurenkovai@gmail.com";
         String password = "test#2023";
+
         PartyInboxLoginPages.writeEmail(email);
         PartyInboxLoginPages.writePassword(password);
-        PartyInboxLoginPages.closeAlert();
+
         PartyInboxLoginPages.clickButtonPrisijungti();
         PartyInboxLoginPages.clickOnUserButton();
+
         String expectedResult = "Eimantas";
         String actualResult = PartyInboxLoginPages.userName();
 
@@ -30,6 +33,8 @@ public class PartyInboxLoginTests extends TestBase {
                 actualResult.contains(expectedResult),
                 "\nActual: %s, \nExpected: %s".formatted(actualResult, expectedResult)
         );
+        PartyInboxLoginPages.clickOnUserButton();
+        PartyInboxLoginPages.clickButtonAtsijungti();
     }
 
     @DataProvider(name = "invalid data")
@@ -43,12 +48,15 @@ public class PartyInboxLoginTests extends TestBase {
 
     @Test(dataProvider = "invalid data")
     public void testLoginNegative(String email, String password) {
+
         PartyInboxLoginPages.writeEmail(email);
         PartyInboxLoginPages.writePassword(password);
-        PartyInboxLoginPages.closeAlert();
+//        PartyInboxLoginPages.closeAlert();
         PartyInboxLoginPages.clickButtonPrisijungti();
+
         String expectedResult = "Įspėjimas: ";
         String actualResult;
+
         actualResult = PartyInboxLoginPages.warningMessage();
 
         Assert.assertTrue(
@@ -56,5 +64,4 @@ public class PartyInboxLoginTests extends TestBase {
                 "\nActual: %s, \nExpected: %s".formatted(actualResult, expectedResult)
         );
     }
-
 }

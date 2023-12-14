@@ -20,6 +20,7 @@ https://www.partyinbox.lt
 * Click on registration button
 * Checking or registration was successful
 ## 2.Test Login with invalid data
+
 * Enter invalid email
 * Enter valid password
 * Checking registration status
