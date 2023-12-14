@@ -1,4 +1,5 @@
 package lt.eimantas.piguLt.pages.login;
+
 import lt.eimantas.piguLt.pages.Common;
 import lt.eimantas.piguLt.pages.Locator;
 
@@ -12,8 +13,8 @@ public class PartyInboxLoginPages {
 
     public static void writeEmail(String email) {
 
-            Common.addText(Locator.login.writeEmail, email);
-        }
+        Common.addText(Locator.login.writeEmail, email);
+    }
 
 
     public static void writePassword(String password) {
@@ -35,7 +36,11 @@ public class PartyInboxLoginPages {
     }
 
     public static String userName() {
-        return Common.getText(Locator.login.getUserName);
+        return Common.getText(Locator.login.readUserName);
+    }
+
+    public static String warningMessage() {
+        return Common.getText(Locator.login.readWarning);
     }
 }
 
