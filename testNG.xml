@@ -3,9 +3,8 @@
 <suite name="Demo automation test" parallel="classes" thread-count="4">
     <test name="All tests">
         <classes>
-<!--            <class name="lt.eimantas.pom.tests.selenium_easy.BaseCheckBoxTest"/>-->
-<!--            <class name="lt.eimantas.pom.tests.selenium_easy.BasicRadioButtonTest"/>-->
-<!--            <class name="lt.eimantas.pom.tests.selenium_easy.BasicFormTest"/>-->
+            <class name="lt.eimantas.partyInbox.tests.login.PartyInboxLoginTests"/>
+            <class name="lt.eimantas.partyInbox.tests.search.SearchTests"/>
         </classes>
     </test>
 </suite>

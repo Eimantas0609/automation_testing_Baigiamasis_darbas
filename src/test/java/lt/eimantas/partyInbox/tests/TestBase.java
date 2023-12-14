@@ -1,7 +1,7 @@
-package lt.eimantas.piguLt.tests;
+package lt.eimantas.partyInbox.tests;
 
-import lt.eimantas.piguLt.pages.Common;
-import lt.eimantas.piguLt.utils.TestListener;
+import lt.eimantas.partyInbox.pages.Common;
+import lt.eimantas.partyInbox.utils.TestListener;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
@@ -13,7 +13,7 @@ public abstract class TestBase {
     public abstract void setUp();
 
     @AfterMethod
-    public void tearDown(){
+    public void tearDown() {
         Common.quitDriver();
     }
 }

@@ -1,4 +1,4 @@
-package lt.eimantas.piguLt.utils;
+package lt.eimantas.partyInbox.utils;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -17,7 +17,6 @@ public class TestListener implements ITestListener {
         try {
             TakesScreenshot screenshot = (TakesScreenshot) Driver.getDriver();
             File screenshotFile = screenshot.getScreenshotAs(OutputType.FILE);
-
 
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd_HH_mm_ss_SSS");
             String dateTime = LocalDateTime.now().format(formatter);
