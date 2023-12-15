@@ -3,6 +3,7 @@ package lt.eimantas.partyInbox.pages;
 import lt.eimantas.partyInbox.utils.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 import java.time.Duration;
 
@@ -35,5 +36,14 @@ public class Common {
 
     public static void quitDriver() {
         Driver.quitDriver();
+    }
+
+    public static void moveAndClickOnElement(By locator) {
+        Actions actions = new Actions(Driver.getDriver());
+        actions
+                .moveToElement(getElement(locator))
+                .click()
+                .build()
+                .perform();
     }
 }

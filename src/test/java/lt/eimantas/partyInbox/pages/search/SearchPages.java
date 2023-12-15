@@ -14,7 +14,7 @@ public class SearchPages {
         Common.clickOnElement(Locator.Login.closeAlert);
     }
 
-    public static void writeWhoSearch(String wantedItem) {
+    public static void writeWhatSearch(String wantedItem) {
         Common.addText(Locator.Search.writeTheDesiredItem, wantedItem);
     }
 

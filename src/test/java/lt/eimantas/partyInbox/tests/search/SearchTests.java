@@ -20,7 +20,7 @@ public class SearchTests extends TestBase {
         String expectedResult;
         expectedResult = wantedItem;
         String actualResult;
-        SearchPages.writeWhoSearch(wantedItem);
+        SearchPages.writeWhatSearch(wantedItem);
         SearchPages.clickFind();
         actualResult = SearchPages.findedItem().toLowerCase();
 

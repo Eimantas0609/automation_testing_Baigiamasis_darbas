@@ -20,7 +20,6 @@ https://www.partyinbox.lt
 * Click on registration button
 * Checking or registration was successful
 ## 2.Test Login with invalid data
-
 * Enter invalid email
 * Enter valid password
 * Checking registration status
@@ -30,3 +29,16 @@ https://www.partyinbox.lt
 * Enter invalid email
 * Enter invalid password
 * Checking registration status
+## 3.Test Search function
+* Write down what to look for
+* Press the button to search
+* Checking the results
+## 4.Test Shopping Cart
+* Click on the product catalog
+* Choose the category
+* Choose the subcategory
+* Choose what want to buy
+* Add item to the cart
+* Click on te cart sign
+* View the cart
+* Checking or appeared button to pay
