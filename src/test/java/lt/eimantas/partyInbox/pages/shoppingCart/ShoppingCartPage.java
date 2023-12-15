@@ -2,22 +2,21 @@ package lt.eimantas.partyInbox.pages.shoppingCart;
 
 import lt.eimantas.partyInbox.pages.Common;
 import lt.eimantas.partyInbox.pages.Locator;
-import lt.eimantas.partyInbox.pages.login.PartyInboxLoginPages;
+import lt.eimantas.partyInbox.pages.login.PartyInboxLoginPage;
 
-public class ShoppingCartPages {
+public class ShoppingCartPage {
     public static void openUrl(String url) {
         Common.setUpChrome(8);
         Common.openUrl(url);
     }
 
     public static void login(String email, String password) {
-        PartyInboxLoginPages.writeEmail(email);
-        PartyInboxLoginPages.writePassword(password);
+        PartyInboxLoginPage.writeEmail(email);
+        PartyInboxLoginPage.writePassword(password);
 
-        PartyInboxLoginPages.clickButtonPrisijungti();
-        PartyInboxLoginPages.clickOnUserButton();
+        PartyInboxLoginPage.clickButtonPrisijungti();
+        PartyInboxLoginPage.clickOnUserButton();
     }
-
 
 
     public static void clickOnProductCatalog() {
@@ -41,6 +40,7 @@ public class ShoppingCartPages {
     }
 
     public static void clickOnCartSign() {
+        Common.waitForElementToBeClickable(Locator.Cart.clickOnCartSign);
         Common.clickOnElement(Locator.Cart.clickOnCartSign);
     }
 

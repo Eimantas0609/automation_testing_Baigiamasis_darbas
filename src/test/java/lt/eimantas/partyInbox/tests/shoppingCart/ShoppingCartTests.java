@@ -1,7 +1,7 @@
 package lt.eimantas.partyInbox.tests.shoppingCart;
 
-import lt.eimantas.partyInbox.pages.login.PartyInboxLoginPages;
-import lt.eimantas.partyInbox.pages.shoppingCart.ShoppingCartPages;
+import lt.eimantas.partyInbox.pages.login.PartyInboxLoginPage;
+import lt.eimantas.partyInbox.pages.shoppingCart.ShoppingCartPage;
 import lt.eimantas.partyInbox.tests.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -11,9 +11,9 @@ public class ShoppingCartTests extends TestBase {
     @BeforeMethod
     @Override
     public void setUp() {
-        ShoppingCartPages.openUrl("https://www.partyinbox.lt/mano-paskyra");
-        PartyInboxLoginPages.closeAlert();
-        ShoppingCartPages.login("jurenkovai@gmail.com", "test#2023");
+        ShoppingCartPage.openUrl("https://www.partyinbox.lt/mano-paskyra");
+        PartyInboxLoginPage.closeAlert();
+        ShoppingCartPage.login("jurenkovai@gmail.com", "test#2023");
     }
 
     @Test
@@ -21,16 +21,16 @@ public class ShoppingCartTests extends TestBase {
 
         String expectedResult = "Atsiskaitymas";
         String actualResult;
-        ShoppingCartPages.clickOnProductCatalog();
-        ShoppingCartPages.chooseCategory();
-        ShoppingCartPages.chooseCategoryKind();
-        ShoppingCartPages.chooseWhatToBuy();
-        ShoppingCartPages.addItemToCart();
-        ShoppingCartPages.clickOnCartSign();
-        ShoppingCartPages.viewCart();
+        ShoppingCartPage.clickOnProductCatalog();
+        ShoppingCartPage.chooseCategory();
+        ShoppingCartPage.chooseCategoryKind();
+        ShoppingCartPage.chooseWhatToBuy();
+        ShoppingCartPage.addItemToCart();
+        ShoppingCartPage.clickOnCartSign();
+        ShoppingCartPage.viewCart();
 
 
-        actualResult = ShoppingCartPages.checkOrApearedButtonToPay();
+        actualResult = ShoppingCartPage.checkOrApearedButtonToPay();
 
         Assert.assertTrue(
                 actualResult.contains(expectedResult),
