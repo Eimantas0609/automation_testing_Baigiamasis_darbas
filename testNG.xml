@@ -4,7 +4,9 @@
     <test name="All tests">
         <classes>
             <class name="lt.eimantas.partyInbox.tests.login.PartyInboxLoginTests"/>
+            <class name="lt.eimantas.partyInbox.tests.login.ChangePasswordTest"/>
             <class name="lt.eimantas.partyInbox.tests.search.SearchTests"/>
+            <class name="lt.eimantas.partyInbox.tests.shoppingCart.ShoppingCartTests"/>
         </classes>
     </test>
 </suite>

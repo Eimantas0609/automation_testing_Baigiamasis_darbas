@@ -4,7 +4,7 @@ import lt.eimantas.partyInbox.pages.Common;
 import lt.eimantas.partyInbox.pages.Locator;
 
 
-public class SearchPages {
+public class SearchPage {
     public static void openUrl(String url) {
         Common.setUpChrome(8);
         Common.openUrl(url);

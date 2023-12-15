@@ -14,17 +14,34 @@ public class Locator {
         public static By chooseCategoryKind = By.xpath(
                 "//li[@class='have-sub']//a[@title='Karnavaliniai kostiumai ir apsiaustai']"
         );
-        public static By chooseWhatToBuy = By.xpath("//div[@id='load_info']/div[1]/div/a");
-        public static By addItemToCart = By.xpath("//input[@value='Į krepšelį']");
-        public static By clickOnCartSign = By.xpath("//button[@id='chart-bt']");
-        public static By viewCart = By.xpath("//a[@title='Peržiūrėti krepšelį']");
-        public static By checkOrAppearedButtonToPay = By.xpath("//a[@title='Atsiskaitymas']");
+        public static By chooseWhatToBuy = By.xpath(
+                "//div[@id='load_info']/div[1]/div/a"
+        );
+        public static By addItemToCart = By.xpath(
+                "//input[@value='Į krepšelį']"
+        );
+        public static By clickOnCartSign = By.xpath(
+                "//button[@id='chart-bt']"
+        );
+        public static By viewCart = By.xpath(
+                "//a[@title='Peržiūrėti krepšelį']"
+        );
+        public static By checkOrAppearedButtonToPay = By.xpath(
+                "//a[@title='Atsiskaitymas']"
+        );
     }
+
     public static class Search {
 
-        public static By writeTheDesiredItem = By.xpath("//input[@id='search-input']");
-        public static By clickFind = By.xpath("//button[@id='search-icone']");
-        public static By findedItem = By.xpath("//div[@id='load_info']/div[1]/div/a[2]");
+        public static By writeTheDesiredItem = By.xpath(
+                "//input[@id='search-input']"
+        );
+        public static By clickFind = By.xpath(
+                "//button[@id='search-icone']"
+        );
+        public static By findedItem = By.xpath(
+                "//div[@id='load_info']/div[1]/div/a[2]"
+        );
     }
 
     public static class Login {
@@ -41,7 +58,7 @@ public class Locator {
         public static By clickButtonPrisijungti = By.xpath(
                 "//input[@type='submit' and @value='Prisijungti']"
         );
-        public static By ClickOnUserButton = By.xpath(
+        public static By clickOnUserButton = By.xpath(
                 "//div[@id='user-icone']"
         );
         public static By readUserName = By.xpath(
@@ -52,6 +69,24 @@ public class Locator {
         );
         public static By clickButtonAtsijungti = By.xpath(
                 "//a[@title='Atsijungti']"
+        );
+
+        public static By clickOnChangeAccountInfo = By.xpath(
+                "//div[@class='user-menu']//a[@title='Keisti paskyros informaciją']"
+        );
+        public static By enterNewPassword = By.xpath(
+                "//input[@type='password' and @name='password']"
+        );
+
+        public static By repeatNewPassword = By.xpath(
+                "//input[@type='password' and @name='confirm']"
+        );
+        public static By clickSubmit = By.xpath(
+                "//input[@value='Išsaugoti']"
+        );
+
+        public static By readMessageAboutChanges = By.xpath(
+                "//div[@class='info-message alert']"
         );
     }
 

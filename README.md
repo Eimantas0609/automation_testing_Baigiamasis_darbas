@@ -13,7 +13,7 @@ https://www.partyinbox.lt
 * Webdriver manager
 
 
-## TEST SCENARIOS:
+# TEST SCENARIOS:
 ## 1. Test Login with valid data
 *  Enter valid email
 *  Enter valid password
@@ -42,3 +42,10 @@ https://www.partyinbox.lt
 * Click on te cart sign
 * View the cart
 * Checking or appeared button to pay
+## 5.Test Change password
+* Click on the My Account icon
+* Click new account info
+* Enter new password
+* Repeat new password
+* Click submit
+* Read message about changes

@@ -4,7 +4,7 @@ import lt.eimantas.partyInbox.pages.Common;
 import lt.eimantas.partyInbox.pages.Locator;
 
 
-public class PartyInboxLoginPages {
+public class PartyInboxLoginPage {
     public static void openUrl(String url) {
         Common.setUpChrome(8);
         Common.openUrl(url);
@@ -28,7 +28,7 @@ public class PartyInboxLoginPages {
     }
 
     public static void clickOnUserButton() {
-        Common.clickOnElement(Locator.Login.ClickOnUserButton);
+        Common.clickOnElement(Locator.Login.clickOnUserButton);
     }
 
     public static String userName() {
