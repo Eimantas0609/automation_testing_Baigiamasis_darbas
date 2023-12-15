@@ -1,6 +1,6 @@
 package lt.eimantas.partyInbox.tests.login;
 
-import lt.eimantas.partyInbox.pages.login.PartyInboxLoginPages;
+import lt.eimantas.partyInbox.pages.login.PartyInboxLoginPage;
 import lt.eimantas.partyInbox.tests.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -11,8 +11,8 @@ public class PartyInboxLoginTests extends TestBase {
     @BeforeMethod
     @Override
     public void setUp() {
-        PartyInboxLoginPages.openUrl("https://www.partyinbox.lt/prisijungti-prie-paskyros");
-        PartyInboxLoginPages.closeAlert();
+        PartyInboxLoginPage.openUrl("https://www.partyinbox.lt/prisijungti-prie-paskyros");
+        PartyInboxLoginPage.closeAlert();
     }
 
     @Test
@@ -20,21 +20,21 @@ public class PartyInboxLoginTests extends TestBase {
         String email = "jurenkovai@gmail.com";
         String password = "test#2023";
 
-        PartyInboxLoginPages.writeEmail(email);
-        PartyInboxLoginPages.writePassword(password);
+        PartyInboxLoginPage.writeEmail(email);
+        PartyInboxLoginPage.writePassword(password);
 
-        PartyInboxLoginPages.clickButtonPrisijungti();
-        PartyInboxLoginPages.clickOnUserButton();
+        PartyInboxLoginPage.clickButtonPrisijungti();
+        PartyInboxLoginPage.clickOnUserButton();
 
         String expectedResult = "Eimantas";
-        String actualResult = PartyInboxLoginPages.userName();
+        String actualResult = PartyInboxLoginPage.userName();
 
         Assert.assertTrue(
                 actualResult.contains(expectedResult),
                 "\nActual: %s, \nExpected: %s".formatted(actualResult, expectedResult)
         );
-        PartyInboxLoginPages.clickOnUserButton();
-        PartyInboxLoginPages.clickButtonAtsijungti();
+        PartyInboxLoginPage.clickOnUserButton();
+        PartyInboxLoginPage.clickButtonAtsijungti();
     }
 
     @DataProvider(name = "invalid data")
@@ -49,15 +49,14 @@ public class PartyInboxLoginTests extends TestBase {
     @Test(dataProvider = "invalid data")
     public void testLoginNegative(String email, String password) {
 
-        PartyInboxLoginPages.writeEmail(email);
-        PartyInboxLoginPages.writePassword(password);
-//        PartyInboxLoginPages.closeAlert();
-        PartyInboxLoginPages.clickButtonPrisijungti();
+        PartyInboxLoginPage.writeEmail(email);
+        PartyInboxLoginPage.writePassword(password);
+        PartyInboxLoginPage.clickButtonPrisijungti();
 
         String expectedResult = "Įspėjimas: ";
         String actualResult;
 
-        actualResult = PartyInboxLoginPages.warningMessage();
+        actualResult = PartyInboxLoginPage.warningMessage();
 
         Assert.assertTrue(
                 actualResult.contains(expectedResult),
