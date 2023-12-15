@@ -1,6 +1,6 @@
 package lt.eimantas.partyInbox.tests.search;
 
-import lt.eimantas.partyInbox.pages.search.SearchPages;
+import lt.eimantas.partyInbox.pages.search.SearchPage;
 import lt.eimantas.partyInbox.tests.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -10,19 +10,19 @@ public class SearchTests extends TestBase {
     @BeforeMethod
     @Override
     public void setUp() {
-        SearchPages.openUrl("https://www.partyinbox.lt/");
-        SearchPages.closeAlert();
+        SearchPage.openUrl("https://www.partyinbox.lt/");
+        SearchPage.closeAlert();
     }
 
     @Test
-    public void test() {
+    public void testSearch() {
         String wantedItem = "kostiumas";
         String expectedResult;
         expectedResult = wantedItem;
         String actualResult;
-        SearchPages.writeWhatSearch(wantedItem);
-        SearchPages.clickFind();
-        actualResult = SearchPages.findedItem().toLowerCase();
+        SearchPage.writeWhatSearch(wantedItem);
+        SearchPage.clickFind();
+        actualResult = SearchPage.findedItem().toLowerCase();
 
         Assert.assertTrue(
                 actualResult.contains(expectedResult),
