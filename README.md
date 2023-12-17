@@ -20,14 +20,17 @@ https://www.partyinbox.lt
 * Click on registration button
 * Checking or registration was successful
 ## 2.Test Login with invalid data
+### First data set
 * Enter invalid email
 * Enter valid password
-* Checking registration status
+* Checking registration status 
+### Second data set
 * Enter valid email
 * Enter invalid password
 * Checking or registration was not successful
-* Enter invalid email
-* Enter invalid password
+### Third data set
+* Enter empty email
+* Enter empty password
 * Checking registration status
 ## 3.Test Search function
 * Write down what to look for
@@ -39,9 +42,7 @@ https://www.partyinbox.lt
 * Choose the subcategory
 * Choose what want to buy
 * Add item to the cart
-* Click on te cart sign
-* View the cart
-* Checking or appeared button to pay
+* Read the message about adding the cart
 ## 5.Test Change password
 * Click on the My Account icon
 * Click new account info

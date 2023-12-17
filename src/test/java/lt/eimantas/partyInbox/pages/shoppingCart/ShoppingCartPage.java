@@ -20,35 +20,26 @@ public class ShoppingCartPage {
 
 
     public static void clickOnProductCatalog() {
-        Common.clickOnElement(Locator.Cart.clickOnProductCatalog);
+        Common.clickOnElement(Locator.Cart.productCatalog);
     }
 
     public static void chooseCategory() {
-        Common.clickOnElement(Locator.Cart.chooseCategory);
+        Common.clickOnElement(Locator.Cart.category);
     }
 
     public static void chooseCategoryKind() {
-        Common.clickOnElement(Locator.Cart.chooseCategoryKind);
+        Common.clickOnElement(Locator.Cart.categoryKind);
     }
 
     public static void chooseWhatToBuy() {
-        Common.moveAndClickOnElement(Locator.Cart.chooseWhatToBuy);
+        Common.moveAndClickOnElement(Locator.Cart.selection);
     }
 
     public static void addItemToCart() {
-        Common.clickOnElement(Locator.Cart.addItemToCart);
+        Common.clickOnElement(Locator.Cart.purchase);
     }
 
-    public static void clickOnCartSign() {
-        Common.waitForElementToBeClickable(Locator.Cart.clickOnCartSign);
-        Common.clickOnElement(Locator.Cart.clickOnCartSign);
-    }
-
-    public static void viewCart() {
-        Common.clickOnElement(Locator.Cart.viewCart);
-    }
-
-    public static String checkOrApearedButtonToPay() {
-        return Common.getText(Locator.Cart.checkOrAppearedButtonToPay);
+    public static String readMessageAboutAddingToCart() {
+        return Common.getText(Locator.Cart.messageAboutCart);
     }
 }

@@ -11,36 +11,36 @@ public class PartyInboxLoginPage {
     }
 
     public static void writeEmail(String email) {
-
-        Common.addText(Locator.Login.writeEmail, email);
+        Common.addText(Locator.Login.inputEmail, email);
     }
 
     public static void writePassword(String password) {
-        Common.addText(Locator.Login.writePassword, password);
+        Common.addText(Locator.Login.inputPassword, password);
     }
 
     public static void closeAlert() {
-        Common.clickOnElement(Locator.Login.closeAlert);
+        Common.clickOnElement(Locator.Login.alert);
     }
 
     public static void clickButtonPrisijungti() {
-        Common.clickOnElement(Locator.Login.clickButtonPrisijungti);
+        Common.clickOnElement(Locator.Login.buttonPrisijungti);
     }
 
     public static void clickOnUserButton() {
-        Common.clickOnElement(Locator.Login.clickOnUserButton);
+        Common.clickOnElement(Locator.Login.buttonUser);
     }
 
     public static String userName() {
-        return Common.getText(Locator.Login.readUserName);
+        return Common.getText(Locator.Login.userName);
     }
 
     public static String warningMessage() {
-        return Common.getText(Locator.Login.readWarning);
+        Common.waitForElementToBeVisible(Locator.Login.greeting);
+        return Common.getText(Locator.Login.greeting);
     }
 
     public static void clickButtonAtsijungti() {
-        Common.clickOnElement(Locator.Login.clickButtonAtsijungti);
+        Common.clickOnElement(Locator.Login.buttonAtsijungti);
     }
 }
 

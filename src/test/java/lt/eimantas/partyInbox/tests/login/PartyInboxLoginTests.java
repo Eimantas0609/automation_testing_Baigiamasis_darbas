@@ -19,6 +19,7 @@ public class PartyInboxLoginTests extends TestBase {
     public void testLoginPositive() {
         String email = "jurenkovai@gmail.com";
         String password = "test#2023";
+        String expectedResult = "Eimantas";
 
         PartyInboxLoginPage.writeEmail(email);
         PartyInboxLoginPage.writePassword(password);
@@ -26,7 +27,6 @@ public class PartyInboxLoginTests extends TestBase {
         PartyInboxLoginPage.clickButtonPrisijungti();
         PartyInboxLoginPage.clickOnUserButton();
 
-        String expectedResult = "Eimantas";
         String actualResult = PartyInboxLoginPage.userName();
 
         Assert.assertTrue(
@@ -42,7 +42,7 @@ public class PartyInboxLoginTests extends TestBase {
         return new Object[][]{
                 {"jurenkovai@gmail.co", "test#2023"},
                 {"jurenkovai@gmail.com", "test2023"},
-                {"jurenkovai@gmail.co", "test2023"},
+                {"", ""},
         };
     }
 

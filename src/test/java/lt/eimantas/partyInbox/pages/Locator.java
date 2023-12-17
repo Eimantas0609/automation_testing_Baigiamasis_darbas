@@ -5,87 +5,81 @@ import org.openqa.selenium.By;
 public class Locator {
     public static class Cart {
 
-        public static By clickOnProductCatalog = By.xpath(
+        public static By productCatalog = By.xpath(
                 "//button[@class='menu-burger-desktop']"
         );
-        public static By chooseCategory = By.xpath(
+        public static By category = By.xpath(
                 "//a[@title='Karnavalinė atributika']"
         );
-        public static By chooseCategoryKind = By.xpath(
+        public static By categoryKind = By.xpath(
                 "//li[@class='have-sub']//a[@title='Karnavaliniai kostiumai ir apsiaustai']"
         );
-        public static By chooseWhatToBuy = By.xpath(
+        public static By selection = By.xpath(
                 "//div[@id='load_info']/div[1]/div/a"
         );
-        public static By addItemToCart = By.xpath(
+        public static By purchase = By.xpath(
                 "//input[@value='Į krepšelį']"
         );
-        public static By clickOnCartSign = By.xpath(
-                "//button[@id='chart-bt']"
-        );
-        public static By viewCart = By.xpath(
-                "//a[@title='Peržiūrėti krepšelį']"
-        );
-        public static By checkOrAppearedButtonToPay = By.xpath(
-                "//a[@title='Atsiskaitymas']"
+        public static By messageAboutCart = By.xpath(
+                "//div[@class='info-message alert']"
         );
     }
 
     public static class Search {
 
-        public static By writeTheDesiredItem = By.xpath(
+        public static By inputTheDesiredItem = By.xpath(
                 "//input[@id='search-input']"
         );
-        public static By clickFind = By.xpath(
+        public static By signFind = By.xpath(
                 "//button[@id='search-icone']"
         );
-        public static By findedItem = By.xpath(
+        public static By nameOfItem = By.xpath(
                 "//div[@id='load_info']/div[1]/div/a[2]"
         );
     }
 
     public static class Login {
 
-        public static By writeEmail = By.xpath(
+        public static By inputEmail = By.xpath(
                 "//input[@type='email']"
         );
-        public static By writePassword = By.xpath(
+        public static By inputPassword = By.xpath(
                 "//input[@type='password']"
         );
-        public static By closeAlert = By.xpath(
+        public static By alert = By.xpath(
                 "//button[@id='close_btn_alert']"
         );
-        public static By clickButtonPrisijungti = By.xpath(
+        public static By buttonPrisijungti = By.xpath(
                 "//input[@type='submit' and @value='Prisijungti']"
         );
-        public static By clickOnUserButton = By.xpath(
+        public static By buttonUser = By.xpath(
                 "//div[@id='user-icone']"
         );
-        public static By readUserName = By.xpath(
+        public static By userName = By.xpath(
                 "//div[@class='user-name']"
         );
-        public static By readWarning = By.xpath(
+        public static By greeting = By.xpath(
                 "//div[@class='info-message alert']"
         );
-        public static By clickButtonAtsijungti = By.xpath(
+        public static By buttonAtsijungti = By.xpath(
                 "//a[@title='Atsijungti']"
         );
 
-        public static By clickOnChangeAccountInfo = By.xpath(
+        public static By noteChangeAccountInfo = By.xpath(
                 "//div[@class='user-menu']//a[@title='Keisti paskyros informaciją']"
         );
-        public static By enterNewPassword = By.xpath(
+        public static By inputNewPassword = By.xpath(
                 "//input[@type='password' and @name='password']"
         );
 
-        public static By repeatNewPassword = By.xpath(
+        public static By inputRepeatNewPassword = By.xpath(
                 "//input[@type='password' and @name='confirm']"
         );
-        public static By clickSubmit = By.xpath(
+        public static By submission = By.xpath(
                 "//input[@value='Išsaugoti']"
         );
 
-        public static By readMessageAboutChanges = By.xpath(
+        public static By messageAboutChanges = By.xpath(
                 "//div[@class='info-message alert']"
         );
     }

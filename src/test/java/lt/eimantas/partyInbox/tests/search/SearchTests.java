@@ -17,8 +17,7 @@ public class SearchTests extends TestBase {
     @Test
     public void testSearch() {
         String wantedItem = "kostiumas";
-        String expectedResult;
-        expectedResult = wantedItem;
+        String expectedResult = "kostiumas";
         String actualResult;
         SearchPage.writeWhatSearch(wantedItem);
         SearchPage.clickFind();

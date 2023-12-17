@@ -49,8 +49,8 @@ public class Common {
                 .perform();
     }
 
-    public static void waitForElementToBeClickable(By locator) {
+    public static void waitForElementToBeVisible(By locator) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.elementToBeClickable(locator));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 }

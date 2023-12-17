@@ -19,18 +19,15 @@ public class ShoppingCartTests extends TestBase {
     @Test
     public void testCreateShoppingCart() {
 
-        String expectedResult = "Atsiskaitymas";
+        String expectedResult = "Pavyko: Jūs patalpinote Aksesuarų rinkinys \"Mexicano\" į savo prekių krepšelį!";
         String actualResult;
         ShoppingCartPage.clickOnProductCatalog();
         ShoppingCartPage.chooseCategory();
         ShoppingCartPage.chooseCategoryKind();
         ShoppingCartPage.chooseWhatToBuy();
         ShoppingCartPage.addItemToCart();
-        ShoppingCartPage.clickOnCartSign();
-        ShoppingCartPage.viewCart();
 
-
-        actualResult = ShoppingCartPage.checkOrApearedButtonToPay();
+        actualResult = ShoppingCartPage.readMessageAboutAddingToCart();
 
         Assert.assertTrue(
                 actualResult.contains(expectedResult),

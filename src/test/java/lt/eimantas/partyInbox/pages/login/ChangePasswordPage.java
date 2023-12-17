@@ -18,27 +18,28 @@ public class ChangePasswordPage {
     }
 
     public static void clickOnIconMyAccount() {
-//        Common.clickOnElement(Locator.Login.clickOnLogedUserButton);
-        Common.clickOnElement(Locator.Login.clickOnUserButton);
+        Common.clickOnElement(Locator.Login.buttonUser);
     }
 
     public static void clickOnChangeAccountInfo() {
-        Common.clickOnElement(Locator.Login.clickOnChangeAccountInfo);
+        Common.waitForElementToBeVisible(Locator.Login.noteChangeAccountInfo);
+        Common.clickOnElement(Locator.Login.noteChangeAccountInfo);
     }
 
     public static void enterNewPassword(String newPassword) {
-        Common.addText(Locator.Login.enterNewPassword, newPassword);
+        Common.addText(Locator.Login.inputNewPassword, newPassword);
     }
 
     public static void repeatNewPassword(String newPassword) {
-        Common.addText(Locator.Login.repeatNewPassword, newPassword);
+        Common.addText(Locator.Login.inputRepeatNewPassword, newPassword);
     }
 
     public static void clickSubmit() {
-        Common.clickOnElement(Locator.Login.clickSubmit);
+        Common.clickOnElement(Locator.Login.submission);
     }
 
     public static String readMessageAboutChanges() {
-        return Common.getText(Locator.Login.readMessageAboutChanges);
+        Common.waitForElementToBeVisible(Locator.Login.messageAboutChanges);
+        return Common.getText(Locator.Login.messageAboutChanges);
     }
 }

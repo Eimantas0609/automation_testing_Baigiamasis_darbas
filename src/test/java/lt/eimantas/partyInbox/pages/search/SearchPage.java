@@ -11,18 +11,18 @@ public class SearchPage {
     }
 
     public static void closeAlert() {
-        Common.clickOnElement(Locator.Login.closeAlert);
+        Common.clickOnElement(Locator.Login.alert);
     }
 
     public static void writeWhatSearch(String wantedItem) {
-        Common.addText(Locator.Search.writeTheDesiredItem, wantedItem);
+        Common.addText(Locator.Search.inputTheDesiredItem, wantedItem);
     }
 
     public static void clickFind() {
-        Common.clickOnElement(Locator.Search.clickFind);
+        Common.clickOnElement(Locator.Search.signFind);
     }
 
     public static String findedItem() {
-        return Common.getText(Locator.Search.findedItem);
+        return Common.getText(Locator.Search.nameOfItem);
     }
 }
