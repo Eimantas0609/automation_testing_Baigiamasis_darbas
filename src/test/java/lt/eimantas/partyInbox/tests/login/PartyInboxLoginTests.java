@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 public class PartyInboxLoginTests extends TestBase {
     @BeforeMethod
     @Override
+
     public void setUp() {
         PartyInboxLoginPage.openUrl("https://www.partyinbox.lt/prisijungti-prie-paskyros");
         PartyInboxLoginPage.closeAlert();

@@ -1,5 +1,5 @@
 # PARTY INBOX
-## Automation tests
+## Automatic tests
 
 ### Reference: 
 https://www.partyinbox.lt 
